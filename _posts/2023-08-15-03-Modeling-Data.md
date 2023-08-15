@@ -29,23 +29,29 @@ tags: [lowcode, modelingdata]
 | Index                        | Index                   |
 | Record or Instance           | Row or Tuble            |
 
+| Company                      | Contact          | Country |
+|:-----------------------------|:-----------------|--------:|
+| Alfreds Futterkiste          | Maria Anders     | Germany |
+| Island Trading               | Helen Bennett    | UK      |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
+
 ## Quiz
 1. Business concepts that need to be stored and accessed in our applications should be modeled as...
 
-Entities.
-Entity diagrams.
-Entity relationships.
-Database tables.
+- [ ]Entities.
+- [ ]Entity diagrams.
+- [ ]Entity relationships.
+- [ ]Database tables.
 
 > Ideally, each business concept will be mapped into a single entity.
 {: .prompt-tip }
 
 2. Which of the following mappings between OutSystems and the Database is NOT correct?
 
-Entities - Tables.
-Attributes - Column.
-Reference attribute - Primary Key.
-Index - Index.
+- [ ]Entities - Tables.
+- [ ]Attributes - Column.
+- [ ]Reference attribute - Primary Key.
+- [ ]Index - Index.
 
 > Ooops... Entity identifiers are the ones that are mapped into primary keys.
 {: .prompt-tip }

@@ -1,7 +1,6 @@
 ---
 title: "Modeling Data"
-author:
-  name: 2deeens
+author: 2deeens
 date: 2023-08-15 23:22:00 +0900
 toc: true
 categories: [Tech, LCAP]
@@ -23,7 +22,7 @@ tags: [lowcode, modelingdata]
 
 ## Entity to Database Mapping
 | Outsystems Entity            | Database Table          | 
-|:-----------------------------|:------------------------|
+|:-----------------------------|------------------------:|
 | Attribute (Data types sw)    | Columns Data types      |
 | ID (Identifier attributes)   | Primary Key             |
 | Reference Attribute          | Foreign Key             |
@@ -50,6 +49,7 @@ Index - Index.
 
 > Ooops... Entity identifiers are the ones that are mapped into primary keys.
 {: .prompt-tip }
+
 
 ## Database Entities
 

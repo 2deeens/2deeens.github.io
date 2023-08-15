@@ -21,6 +21,7 @@ tags: [lowcode, modelingdata]
  + Relationships
 
 ## Entity to Database Mapping
+
 | Outsystems Entity            | Database Table          | 
 |:-----------------------------|------------------------:|
 | Attribute (Data types sw)    | Columns Data types      |

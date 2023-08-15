@@ -29,11 +29,11 @@ tags: [lowcode, modelingdata]
 | Index                        | Index                   |
 | Record or Instance           | Row or Tuble            |
 
-| Company                      | Contact          | Country |
-|:-----------------------------|:-----------------|--------:|
-| Alfreds Futterkiste          | Maria Anders     | Germany |
-| Island Trading               | Helen Bennett    | UK      |
-| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
+| Company                      | Contact          |
+|:-----------------------------|-----------------:|
+| Alfreds Futterkiste          | Maria Anders     |
+| Island Trading               | Helen Bennett    |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli |
 
 ## Quiz
 1. Business concepts that need to be stored and accessed in our applications should be modeled as...

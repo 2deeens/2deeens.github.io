@@ -1,11 +1,11 @@
 ---
-title: "OutSystems Overview"
+title: "Outsystems Overview"
 author:
   name: 2deeens
-date: 2023-08-15 21:22:00 +0900
+date: 2023-08-10 10:22:00 +0900
 toc: true
-categories: [Tech, LCAP]
-tags: [lowcode, overview]
+categories: [Tech, lowcode]
+tags: [lowcode, event]
 ---
 
 # OutSystems Overview

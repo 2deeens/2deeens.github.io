@@ -18,11 +18,16 @@ Outsystmes enables the development and delivery of enterprise web and mobile app
 * Intergrates with other systems
 
 ## Platform capabilities
-1) Integration everything : 존재하는 모든 데이터와 코드와 통합이 가능하다.
-2) Visual design and development : 시각화된 개발환경을 제공
-3) Standard and Optimized : 표준을 사용할 수 있으며 커스텀이 가능하다 (.NET, HTML, CSS, Javascript 등)
-4) CI / CD : 지속적인 통합 및 지속적인 배포가 가능하다.
-5) Flexible Infrastructure : 클라우드/온프레미스 환경 모두 사용이 가능하다
+1. Integration everything
+ : 존재하는 모든 데이터와 코드와 통합이 가능하다.
+2. Visual design and development 
+ : 시각화된 개발환경을 제공
+3. Standard and Optimized
+ : 표준을 사용할 수 있으며 커스텀이 가능하다 (.NET, HTML, CSS, Javascript 등)
+4. CI / CD
+ : 지속적인 통합 및 지속적인 배포가 가능하다.
+5. Flexible Infrastructure
+ : 클라우드/온프레미스 환경 모두 사용이 가능하다
 
 
 # Outsystems compoments and Tools
@@ -39,21 +44,21 @@ Opertation을 위한 Service Center, Lifetime Tool
 * Monitors 
 
 ## Service Studio
-Serivce Studio를 통해 Platform Server로 접속할 수 있다.
-Service Studio는 웹/모바일 앱 개발환경을 제공한다.
-한번의 접속으로 Create와 Publish가 가능하다.
-각 버전의 Application은 Platform Database Server에 저장된다.
-Application Server : 전통적인 DB를 사용하며, 외부 시스템과 통신할 수 있다. 
+*-* Serivce Studio를 통해 Platform Server로 접속할 수 있다.
+* Service Studio는 웹/모바일 앱 개발환경을 제공한다.
+* 한번의 접속으로 Create와 Publish가 가능하다.
+* 각 버전의 Application은 Platform Database Server에 저장된다.
+* Application Server : 전통적인 DB를 사용하며, 외부 시스템과 통신할 수 있다. 
 * Visual Design and Development
 
 ## Integration Studio
-Integration Studio는 플랫폼을 확장하여 개발하는 것을 지원한다.
-C# 같은 코드를 지원한다.
+* Integration Studio는 플랫폼을 확장하여 개발하는 것을 지원한다.
+ - C# 같은 코드를 지원한다.
 
 ## Service Center
 * Manage the server
-Service Center는 management와 administration console을 제공하는 서버임.
-웹 브라우저틀 통해 접속가능하며, 기본적인 설정이 가능하다
+ - Service Center는 management와 administration console을 제공하는 서버임.
+ - 웹 브라우저틀 통해 접속가능하며, 기본적인 설정이 가능하다
 
 ### Service Center - Factory
 Application 현황을 볼 수 있다.

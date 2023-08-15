@@ -4,7 +4,7 @@ author:
   name: 2deeens
 date: 2023-08-15 20:22:00 +0900
 toc: true
-categories: [Tech, lowcode]
+categories: [Tech, LCAP]
 tags: [lowcode, servicestudio]
 ---
 

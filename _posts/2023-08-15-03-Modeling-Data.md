@@ -22,27 +22,22 @@ tags: [lowcode, modelingdata]
 
 ## Entity to Database Mapping
 
-| Outsystems Entity            | Database Table          | 
-|:-----------------------------|------------------------:|
-| Attribute (Data types sw)    | Columns Data types      |
-| ID (Identifier attributes)   | Primary Key             |
-| Reference Attribute          | Foreign Key             |
-| Index                        | Index                   |
-| Record or Instance           | Row or Tuble            |
+| Outsystems Entity            | Database Table       | 
+|:-----------------------------|:---------------------|
+| Attribute (Data types sw)    | Columns Data types   |
+| ID (Identifier attributes)   | Primary Key          |
+| Reference Attribute          | Foreign Key          |
+| Index                        | Index                |
+| Record or Instance           | Row or Tuble         |
 
-| Company                      | Contact          |
-|:-----------------------------|-----------------:|
-| Alfreds Futterkiste          | Maria Anders     |
-| Island Trading               | Helen Bennett    |
-| Magazzini Alimentari Riuniti | Giovanni Rovelli |
 
 ## Quiz
 1. Business concepts that need to be stored and accessed in our applications should be modeled as...
 
-- [ ]Entities.
-- [ ]Entity diagrams.
-- [ ]Entity relationships.
-- [ ]Database tables.
++ [ ] Entities.
++ [ ] Entity diagrams.
++ [ ] Entity relationships.
++ [ ] Database tables.
 
 > Ideally, each business concept will be mapped into a single entity.
 {: .prompt-tip }

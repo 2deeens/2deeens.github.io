@@ -10,15 +10,15 @@ tags: [lowcode, modelingdata]
 # Modeling data
 
 - Application은 business와 관련된 정보를 포함하고 있다.
- + 이러한 정보는 일반적으로 저장 / 가공을 필요로 한다.
+  + 이러한 정보는 일반적으로 저장 / 가공을 필요로 한다.
 - Application information 또는 데이터는 다양한 business 컨셉을 표현한다.
 - Outsystems에서는 이러한 컨셉들을 Entities로 모델링할 수 있다.
- + Database Entities는 database로부터 데이터를 retrieve하고 저장할 수 있다.
+  + Database Entities는 database로부터 데이터를 retrieve하고 저장할 수 있다.
 
 ## Modeling data
 - Entities는 development environment 내부에 define/create 된다.
- + Attributes
- + Relationships
+  + Attributes
+  + Relationships
 
 ### Entity to Database Mapping
 
@@ -143,19 +143,19 @@ The Entity Action that allows retrieving data is the Get.
 
 ### Static Entities
 - Static Entity는 enumerations처럼 작동한다,
- + List of items(Records) in a collectoin
+  + List of items(Records) in a collectoin
 - Static Entity는 Attribute와 Record를 갖는다
- + 디자인과 개발간에 정의된다.
- + runtime떄는 수정/변경 불가능
+  + 디자인과 개발간에 정의된다.
+  + runtime떄는 수정/변경 불가능
 - Only 1 Entity Action
- + The Get Entity Action
+  + The Get Entity Action
 
  ### Attributes
  - Static Entity는 4가지 기본 attribute와 함께 생성된다.
-  + Id
-  + Labe
-  + Order
-  + Is_Active
+   + Id
+   + Labe
+   + Order
+   + Is_Active
 - 위 4가지 attribute는 변경할 수 있다 (name)
 - 다른 attribute 추가 가능함.
 

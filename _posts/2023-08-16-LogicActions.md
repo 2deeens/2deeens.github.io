@@ -22,15 +22,15 @@ tags: [lowcode, logicaction]
 
 ### Actionss
 - Screen Actions : Logic specific to a single screen
- + 화면의 버튼을 누를때 실행되는 screen action
- + action의 범위는 screen's level
- + screen sidgets은 screen level과 screen input parameter에 정의된 aggregate도 포함한다.
+  + 화면의 버튼을 누를때 실행되는 screen action
+  + action의 범위는 screen's level
+  + screen sidgets은 screen level과 screen input parameter에 정의된 aggregate도 포함한다.
 
- - Client Actions : Logic to be used on the device
+- Client Actions : Logic to be used on the device
   + Module을 통해서 사용되며, 특정 화면내에서 제한되지 않는다.
 
 - Server Actions : Logic to be used on the server
- + 서버에서 실행되는 actions
+  + 서버에서 실행되는 actions
 
 ### Code Reusability
 

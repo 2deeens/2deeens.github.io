@@ -1,11 +1,18 @@
 ---
-title: "Aggregates 101"
+title: "Native App Generation"
 author: 2deeens
-date: 2023-08-17 16:22:00 +0900
+date: 2023-09-21 16:22:00 +0900
 toc: true
 categories: [Tech, LCAP]
-tags: [lowcode, aggregate]
+tags: [lowcode, nativeapp]
 ---
+
+# Signing Native Mobile Apps
+
+
+# Native Platforoms
+
+# Generating Native Mobile App
 
 # Aggregates 101
 > Aggregates는 Aggregates의 source를 다룬다.
@@ -91,38 +98,3 @@ SELECT SQL 쿼리로 번역되며, 이는 모듈이 publish 되는 컴파일 단
 * ORDER BY : Sroging
 
 ## Quiz
-1. In an Aggregate, the Sources section is used for...
-
-Defining values for testing the Aggregate's output records.
-Defining the Entities we want to retrieve records from.
-Defining conditions to get specific subsets of records.
-Defining the order of the Aggregate's output records.
-
-Yes! Aggregates support one or more source Entities and with relationships defined between them.
-
-2. Considering that we can add several filters to an Aggregate, which of the following options is false?
-
-A record is included in the output if it matches at least one of the filters.
-Filters are concatenated with the AND operator.
-All filters are translated to SQL and included in the WHERE clause.
-Logical operators and some built-in functions can be used inside filters.
-
-For a record to be included in the output result it must be true for all filters defined.
-
-3. Regarding Sorting in Aggregates, which of the following options is correct?
-
-Aggregates only support one sorting criterion.
-If more than one sorting criterion is defined, all of them must have the same direction (ascending or descending).
-It is mandatory to set the direction for all sorting criteria (ascending or descending).
-It is only possible to set multiple sorting criteria if duplicate records exist in the entity.
-
-Sorting criteria direction has to be either Ascending or Descending.
-
-4. In an Aggregate, the purpose of the Test Values section is…
-
-To define values for testing the preview of the Aggregate's output.
-To set the conditions to get specific records, not all the records.
-To define the order of its output records.
-To define the Entities we want to get records from.
-
-The Test Values section is used for testing the Aggregate and preview the output records.

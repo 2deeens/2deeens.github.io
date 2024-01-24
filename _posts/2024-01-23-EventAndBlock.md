@@ -79,3 +79,20 @@ tags: [lowcode, outsystems, event, block]
   1) Block 내부의 Event가 발생한다. (Block 내부의 요일이 선택된다)
   2) Event가 trigger 되고, Event Handler로 넘어간다.
   3) Handler 내부의 Logic을 수행하고, Event가 종료된다.
+
+
+  On Parameters Changed
+  # Execution Flow
+  - Block 내부에서만 가능하다.
+  - Trigger가 자동으로 걸린다.
+    * 언제든지 부모는 Block의 Input Parameter 값을 변경한다.
+  - Block 내부의 Input Parameter 변경은 이벤트를 발생시키지 않는다.
+
+  
+  # Lifecycle
+  1) Parameters Changed
+  2) Render (Block)
+  3) Render (Screen)
+  4) Render (Block)
+  ?? 모르겠음
+  

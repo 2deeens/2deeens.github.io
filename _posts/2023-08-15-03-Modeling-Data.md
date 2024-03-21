@@ -189,3 +189,9 @@ Attributes of static entities can be mandatory or not. A value is only required 
 + [ ] Static variables.
 
 This is the closest one.
+
+16 17 18
+19 20
+20 21
+22 23
+24

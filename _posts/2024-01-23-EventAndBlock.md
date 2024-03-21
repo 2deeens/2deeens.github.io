@@ -94,5 +94,3 @@ tags: [lowcode, outsystems, event, block]
   2) Render (Block)
   3) Render (Screen)
   4) Render (Block)
-  ?? 모르겠음
-  

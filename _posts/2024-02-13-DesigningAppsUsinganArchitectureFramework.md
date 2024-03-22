@@ -70,19 +70,58 @@ Updated
 
 ## The Architecture Design Process
 ### Discolse
+  - User Stories, Personas and Roles
+  - Information Architecture
+  - Integration Technology
+  - User Experience Expectations
+
 ### Organize
 ### Assemble
+- Join conceptually-related concepts
+- Don't join concepts with different lifecycles
+- Isolate reusable logic from integration logic
 
 ## Designing an Architecture
+- The blueprint shows each Module in the corresponding layer
+- add dependencies between modules.
+- keep iterating the three steps of the process
+
 
 # Architecture Conventions for Modules
 ## Naming Conventions for Modules
 
 # Typical Module Elements
 ## Typical Module Elements
+### Foundation Layer
+- Data
+  * Structures for inputs and outputs
+  * Non-core entities
+데이터 관점에서 외부 시스템의 데이터 변화를 핸들링하기 위한 input/output structure가 필요할 수 있다.
+그러나 Core Entity를 가지고 있을거라 예상하지 않을 것이다.
+왜냐하면 이는 integration과 non-business 기능을 위한 것이기 때문이다.
+
+- Logic
+  * Normalized APIs : Logic을 고려하면 해당 Layer는 정규화된 API 형태로 다른 모듈에 action을 제공한다.
+  * Exception handling (avoid error codes) : 만약 외부 시스템과 통신이 필요하다면, 어떤 형태의 예외처리가 필요할 수 있다. 이러한 예외처리를 올바르게 처리되는 것을 보장할 수 있다.
+  * (Single) sign-on and session logic : 인증 흐름이 필요한 경우 (중앙화된 SSO) 이러한 것도 Foundation Layer에서 제공된다.
+  * Common Roles to a domain of users(e.g. intranet)
+  : 특정 사용자 도메인에 공통적인 역할을 저장할 수 있다. 
+  메니저나 직원과 같은 Role은 재사용 가능하므로, 이런 Role도 foundation moduledp 둘 필요가 있다.
+
+- Interface
+  * UI patterns or blocks (e.g. calender. accordion)
+  : Foundation Layer 에서는 재사용 가능한 UI패턴 또는 Block을 정의하는 Moudle이 존재.
+  * Themes, Layouts and exception flows
+  :   Theme, Layout, Exception Flow는 재사용되는 요소의 예시가 될 수 있다.
+  이 모든 것들은 재사용가능하며, Foundation Layer에 저장하는 일부가 될 수 있다.
+
+  이제 Core Layer로 넘어가면, 핵심 비지니스 개념들이 나타난다.
+  해당 요소들은 End-user Layer의 모듈들에 의해 소비될 것이다.
+
+### Core Layer
+
+
 ## Typical Module Elements: Doctors App
 
 # Application Composition
 
-Breeze
-CodeEasier

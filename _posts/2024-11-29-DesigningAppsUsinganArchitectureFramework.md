@@ -4,7 +4,7 @@ author: 2deeens
 date: 2024-11-29 09:22:00 +0900
 toc: true
 categories: [Tech, LCAP]
-tags: [lowcode, outsystems, siteproperties]
+tags: [lowcode, outsystems, architecture]
 ---
 
 # Why is Architecture Important?
@@ -140,26 +140,104 @@ Updated
 
 
 
-### Discolse
-  - User Stories, Personas and Roles
-  - Information Architecture
-  - Integration Technology
-  - User Experience Expectations
+## Designing an Architecture (병원 예약 예제)
 
-### Organize
-### Assemble
-- Join conceptually-related concepts
-- Don't join concepts with different lifecycles
-- Isolate reusable logic from integration logic
+> 아키텍처 설계 프로세스를 실제 비지니스 사례에 적용해본다. 적용 사례는 병원 예약 시스템.
+> 설계 목표 : 설계 프로세스 3단계를 따라 Architecture Canvas를 구성하고, 최종적으로 Architecture Blueprint와 참조 맵 완성한다.
+{: .prompt-tip }
 
-## Designing an Architecture
-- The blueprint shows each Module in the corresponding layer
-- add dependencies between modules.
-- keep iterating the three steps of the process
+### 1단계 : Disclose (개념 도출)
+- 요구사항 분석
+  + 요구사항 1
+    * 의사들이 자신의 일정, 환자 검사 결과를 확인하고 긴급 사례를 선택할 수 있어야 함.
+    * 사용자 프로세스 관련 개념으로 End-user 계층에 배치
+    * 의사, 검사, 환자 개념은 핵심 비지니스 개념으로 Core 계층에 배치
+  + 요구사항 2
+    * 의사들은 병원의 다양한 부서에서 근무.
+    * 병원 및 부서 개념은 Core 계층에 배치
+  + 요구사항 3
+    * Google Calender를 통해 예약을 확인하고 의사의 가용시간을 확인해야함.
+    * 예약은 핵심 비지니스 개념으로 Core 계층에 배치
+    * Google Calender 통합은 외부시스템이므로 Foundation 계층에 배치
+  + 요구사항 4
+    * 의사는 SMS 또는 알람으로 공지를 확인
+    * 알림은 외부 시스템이므로 Foundation 계층에 배치
+  + 요구사항 5
+    * 웹 애플리케이션은 예약을 관리할 수 있어야 함.
+    * 해당 개념은 End-user 계층에 배치
+
+### 2단계 : Organize (개념 정리)
+- 계층별 개념 배치
+  + End-user Layer : 의사 모바일 앱, 예약 관리 웹 앱
+  + Core Layer : 의자, 환자, 검사, 병원 및 부서, 예약
+  + Foundation Layer : Google Calender 통합, SMS 및 알림 통합
+
+- 주의사항
+  + Disclose (개념 도출) 단계에서 도출된 개념을 계층에 정리하며 필요한 경우 반복적으로 새로운 개념 추가 가능함.
+
+### 3단계 : Assemble (모듈 구성)
+- 모듈화 전략
+  1. 공통 생명주기 모듈
+    + 관련 개념을 하나의 모듈에 결합
+    + 예시 : 병원과 부서는 병원 모듈로 결합
+  2. 독립된 생명주기 모듈
+    + 서로 다른 생명주기를 가진 개념은 별도 모듈로 분리
+    + 예시 : 의사와 환자는 별도 모듈로 구성
+  3. 재사용 로직 분리
+    + 재사용 가능한 로직은 Core Layer, 통합 로직은 Foundation Layer에 배치
+    + 예시 : Google Calender, SMS는 서버측 통합 모듈로 구성
+  4. 디자인 패턴 적용
+    + 모바일 앱의 경우 로컬 저장소 및 동기화를 처리하는 모듈을 추가
+
+- 최종 구성
+  + End-user Layer : 의사 모바일 앱, 예약 관리 앱
+    * 각각에 맞는 위젯/블록 및 테마를 별도 모듈로 분리
+  + Core Layer : 의사, 환자, 검사, 병원, 예약
+    * 예약 모듈은 병원, 의사, 검사, 환자 모듈을 조율
+  + Foundation Layer : Google Calender, SMS
+
+## Architecrue Blueprint 및 참조 맵
+아키텍처 청사진 : 각 모듈이 계층에 배치된 상태를 보여준다
+참조맵 : 모듈간 의존성을 화살표로 표시하여 관계를 시각화
 
 
 # Architecture Conventions for Modules
+> 모듈 네이밍 규칙의 중요성과 이를 사용하는 방법에 대한 내용.
+
 ## Naming Conventions for Modules
+
+### 네이밍 규칙의 중요성
+- 왜 네이밍 규칙이 필요한가?
+  + 모듈 및 내부 요소의 성격을 드러냄
+  + 참조 아키텍처를 강화하고, 모듈을 일관성 있게 관리할 수 있음
+  + 설계 패턴을 표준화하고 팀 간 커뮤니케이션을 개선
+
+- 네이밍 규칙의 이점
+  + 모듈의 목적을 명확히 함
+  + 복잡한 아키텍처 디자인에서도 패턴을 일관되게 유지
+  + 모듈 관리 용이성
+
+### 각 계층별 네이밍 규칙
+1. Foundation Layer
+  + _Lib: 재사용 가능한 일반 라이브러리 모듈
+  + _IS: 외부시스템 통합 및 데이터 정규화를 위한 통합 서비스 모듈
+  + _Drv: 특정 통합 서비스 드라이버 모듈
+  + _Th: 앱의 테마 및 전체적인 외형요소
+  + _Pat: 재사용 가능한 UI 패턴 및 블록
+  + _Plug: 재사용 가능한 모바일 플러그인 모듈
+  + 모바일 전용 모듈은 이름 앞에 "M"을 추가 (_MTh, _MIs..)
+2. Core Layer
+  + _CS: 비지니스와 관련된 재사용 가능한 코어 서비스 모듈 (공개 엔터티 및 비지니스 관련 작업 포함)
+  + _BL: 비지니스 로직을 캡슐화하는 모듈
+  + _CW: UI를 구성하는 코어 위젯 및 블록 모듈
+  + _Eng: 복잡한 비지니스 규칙을 계산하는 기술적인 로직 모듈
+  + _Sync: 데이터 동기화 로직을 처리하는 모듈
+  + _API: 외부 소비자를 위한 API 제공 모듈
+  + 모바일 정용 모듈은 이름 앞에 "M"을 추가
+3. End-user Layer
+  + URL에 사용되므로 짧고 직관적인 이름을 사용하는 것이 중요
+  + 공백은 제거, 사용자 친화적 이름으로 설정
+
 
 # Typical Module Elements
 ## Typical Module Elements

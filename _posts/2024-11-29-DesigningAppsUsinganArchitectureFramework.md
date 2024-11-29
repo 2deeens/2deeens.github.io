@@ -187,7 +187,7 @@ Updated
   이 모든 것들은 재사용가능하며, Foundation Layer에 저장하는 일부가 될 수 있다.
 
   이제 Core Layer로 넘어가면, 핵심 비지니스 개념들이 나타난다.
-  해당 요소들은 End-user Layer의 모듈들에 의해 소비될 것이다.
+  해당 요소들은 End-user Layer의 모듈들에 의해 소비될 것이다. 
 
 ### Core Layer
 

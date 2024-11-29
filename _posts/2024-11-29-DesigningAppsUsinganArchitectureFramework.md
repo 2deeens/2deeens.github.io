@@ -240,8 +240,12 @@ Updated
 
 
 # Typical Module Elements
+각 계층의 모듈에 포함된 일반적인 요소를 살펴봄.
+아키텍처 캔버스와 함께 각 계층별 요소를 구체적으로 이해.
 ## Typical Module Elements
 ### Foundation Layer
+Foundation Layer는 통합 서비스와 비기능 요구사항을 처리하며, 재사용 가능한 요소들이 정의된다.
+
 - Data
   * Structures for inputs and outputs
   * Non-core entities
@@ -268,6 +272,51 @@ Updated
   해당 요소들은 End-user Layer의 모듈들에 의해 소비될 것이다.
 
 ### Core Layer
+Core 계층은 핵심 비지니스 개념과 관련된 데이터를 처리하고 End-user Layer에서 소비된다.
+
+- Data
+  + 핵심비지니스 엔터티는 이 계층에 위치
+    *  엔터티는 읽기 전용으로 노출
+    * 데이터 조작은 모듈 내 로직에 의해 제어
+  + 서버 액션을 통해 데이터 변경 작업 노출
+    * 기본값 설정, 감사 수행 용이
+
+- Logic
+  + Foundatoin Layer의 통합 서비스 래핑
+  + 역할 : 모듈 내 기능에 대한 접근 권한 정의
+
+- Interface
+  + 재사용 가능한 비지니스 UI Block : 특정 비지니스 요구를 충족하는 UI요소
+
+- Process
+  + 비동기 데이터 처리 : 분류/동기화/집계 등 작업 수행, 비지니스 프로세스 및 타이머 활용
+
+- 주의사항
+  + 화면은 정의하지 않음
+  + End-user Layer에서만 화면이 정의된다.
+
+### End-user Layer
+End-user Layer는 사용자 화면과 보조요소가 정의되는 계층
+- Data
+  + UI상태를 저장하는 엔터티 및 보조구조
+  
+- Logic
+  + 폼 검증과 같은 특정 UI 사용 사례를 지원하는 비지니스 로직 포함
+    * 재사용 가능한 로직은 Core Layer로 이동
+  + 역할 기반 UI : 특정 사용자 사례를 지원하는 UIelwkdls
+  + Work Flow 로 정의된 비지니스 프로세스 : 사용자 프로세스를 지원
+
+
+### 핵심 요약
+1. Foundation Layer
+  + 통합 및 비기능 요구사항
+  + 예시 : API, 인증, 예외처리, 테마, 재사용 가능한 UI 패턴
+2. Core Layer
+  + 핵심 비지니스 데이터와 로직
+  + 예시 : 핵심 엔터티, 비지니스 로직, 비동기 데이터 처리
+3. End-user Layer
+  + 사용자 화면 및 UI 보조 요소
+  + 예시: 폼 검증, 역할 기반 UI, 비지니스 프로세스
 
 
 ## Typical Module Elements: Doctors App

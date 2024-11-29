@@ -1,10 +1,10 @@
 ---
-title: "Designing Apps Using an Architecture Framework"
+title: "Designing Apps With Architecture Framework"
 author: 2deeens
 date: 2024-11-29 18:22:00 +0900
 toc: true
 categories: [Tech, LCAP]
-tags: [lowcode, outsystems, architecture, framework]
+tags: [lowcode, outsystems, siteproperties]
 ---
 
 # Why is Architecture Important?

@@ -8,7 +8,7 @@ tags: [lowcode, outsystems, architecture, framework]
 ---
 
 # Why is Architecture Important?
-
+test
 ## Building Quantity Software
 > Why is application architecture important when building quantity software solutions?
 
